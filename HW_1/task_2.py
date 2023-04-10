@@ -4,7 +4,7 @@
 
 Summ = int(input("Введите общее число журавликов (Summ), которое сделали дети: "))
 if Summ % 6 == 0:
-    PSCrane = Summ//6
+    PSCrane = Summ // 6
     KCrane = 4*PSCrane
     print(
         f"Всего журавликов {Summ}, из них Катя сделала {KCrane} штук Петя и Сережа сделали по {PSCrane} штук")
