@@ -5,7 +5,7 @@ n = int(input("Введите размер шоколадки (n):"))
 m = int(input("Введите размер шоколадки (m):"))
 k = int(input("Введите число долек (k):"))
 
-if k < (n * m) and ((k % n == 0) or (k % m == 0)):
+if k < n * m and (k % n == 0 or k % m == 0):
     print('YES')
 else:
     print('NO')
