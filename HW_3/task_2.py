@@ -16,6 +16,5 @@ array_a = [random.randint(0, 5) for i in range(n_for_array)]
 print(f"Полученный массив чисел {array_a}")
 find_number = 0
 
-for i in array_a:
-   find_number = min(array_a, key = lambda i: abs(i - x_number)) 
+find_number = min(array_a, key = lambda i: abs(i - x_number)) 
 print(f"Искомый элемент: {find_number}")
