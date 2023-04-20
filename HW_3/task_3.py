@@ -9,28 +9,46 @@
 # *Пример:*
 # ноутбук    12
 
-Latin = 'abcdefghijklmnopqrstuvwxyz'
-Cyrillic = 'абвгдеёжзиклмнопрстуфхцчшщъыьэюя'
+Alphabet = 'abcdefghijklmnopqrstuvwxyzабвгдеёжзиклмнопрстуфхцчшщъыьэюя'
+#Cyrillic = 'абвгдеёжзиклмнопрстуфхцчшщъыьэюя'
 
-dic_lat = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: "K", 8: 'JX', 10: 'QZ'}
-dict_cyr = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФШЪ'}
+dict_abc = {1: 'АВЕИНОРСТAEIOULNSTR', 2: 'ДКЛМПУDG', 3: 'БГЁЬЯBCMP', 4: 'ЙЫFHVWY', 5: 'ЖЗХЦЧK', 8: 'ШЭЮJX', 10: 'ФЩЪQZ'}
+
 
 word = input('Введите слово или набор букв используя киррилицу или латиницу: ')
 
 if word.isalpha():
-    if word[0].lower() in Latin:
+    if word[0].lower() in Alphabet:
         summa = 0
         for letter in word:
-             for key,  value in dic_lat.items():
+             for key,  value in dict_abc.items():
                     if letter.upper() in value:
                         summa += key
-        print(f"стоимость введенного слова (латиница) = {summa}")
-    else:
-        if word[0].lower() in Cyrillic:
-            summa = 0
-            for letter in word:
-                for key, value in dict_cyr.items():
-                    if letter.upper() in value:
-                        summa += key
-            print(f'стоимость введенного слова (кириллица) = {summa}')
+        print(f"стоимость введенного слова = {summa}")
+
+
+# Latin = 'abcdefghijklmnopqrstuvwxyz'
+# Cyrillic = 'абвгдеёжзиклмнопрстуфхцчшщъыьэюя'
+
+# dic_lat = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: "K", 8: 'JX', 10: 'QZ'}
+# dict_cyr = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФШЪ'}
+
+# word = input('Введите слово или набор букв используя киррилицу или латиницу: ')
+
+# if word.isalpha():
+#     if word[0].lower() in Latin:
+#         summa = 0
+#         for letter in word:
+#              for key,  value in dic_lat.items():
+#                     if letter.upper() in value:
+#                         summa += key
+#         print(f"стоимость введенного слова (латиница) = {summa}")
+#     else:
+#         if word[0].lower() in Cyrillic:
+#             summa = 0
+#             for letter in word:
+#                 for key, value in dict_cyr.items():
+#                     if letter.upper() in value:
+#                         summa += key
+#             print(f'стоимость введенного слова (кириллица) = {summa}')
            

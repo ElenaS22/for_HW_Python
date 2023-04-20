@@ -12,7 +12,7 @@ n_for_array = int(input("Ведите число N, которое соотве�
 x_number = int(input("Ведите число X, которое требуется найти среди элементов в массиве чисел N: "))
 
 array_num = [random.randint(0, 5) for i in range(n_for_array)]
-print(array_num, end=' ')
+print(array_num)
 counter_x = 0
 for i in array_num:
     if i == x_number:
