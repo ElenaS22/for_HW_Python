@@ -11,6 +11,7 @@ def stepen(num_a, num_b):
         return num_a
     elif num_b == 0:
         return 1
+        return 1
     elif num_b > 0  and num_b != 1:
         return num_a * (stepen(num_a, num_b - 1))
     elif num_b < 0:
