@@ -9,7 +9,7 @@ def summa_num(num_a, num_b):
     elif num_b == 0:
         return num_a
     elif num_b > 0  and num_b != 1:
-        return (1 + (summa_num(num_a, num_b - 1)))
+        return 1 + summa_num(num_a, num_b - 1)
     elif num_b < 0:
         return " ошибка. Введите положительное число В"
     
