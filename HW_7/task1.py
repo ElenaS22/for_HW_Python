@@ -19,9 +19,9 @@ def winni_ritm(phrase):
         parts.append(summa)
 
     if len(set(parts)) == 1:
-            print('Парам пам-пам')
+        print('Парам пам-пам')
     else:
-            print('Пам парам')
+        print('Пам парам')
 
 winnii = input('Введите фразу Винни-Пуха: ')
 winni_ritm(winnii)
